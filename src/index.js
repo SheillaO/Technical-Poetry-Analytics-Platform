@@ -32,3 +32,13 @@ function generatePoem(event) {
 
 let poemFormElement = document.querySelector("#poem-generator-form");
 poemFormElement.addEventListener("submit", generatePoem);
+
+function toggleTheme() {
+  document.body.classList.toggle("dark-mode");
+  const button = document.querySelector(".theme-toggle");
+  if (document.body.classList.contains("dark-mode")) {
+    button.textContent = "☀️ Light Mode";
+  } else {
+    button.textContent = "🌙 Dark Mode";
+  }
+}
