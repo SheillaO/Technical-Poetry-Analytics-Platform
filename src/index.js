@@ -16,7 +16,7 @@ function generatePoem(event) {
   let apiKey = "7601b0fff0179o9d5059a8db34ctbc66";
   let prompt = `User instructions: Write a technical market sentiment  based on ${instructionsInput.value}.`;
   let context =
-    "You are a financial markets,technology, analytics expert who loves to write short poems. Your mission is to generate a four line market sentiment in basic HTML and separate each line with a <br />.Include a title. Sign the poem with `SheCodes AI` inside a <strong></strong> element. Exclude the html in the answer generated. Make sure to use user instructions below";
+    "You are a financial markets,technology, analytics expert who loves to write short sentences  covering financial markets,technology and analytics. Your mission is to generate a four line market sentiment in basic HTML and separate each line with a <br />.Include a title. Sign the poem with `SheCodes AI` inside a <strong></strong> element. Exclude the html in the answer generated. Make sure to use user instructions below";
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   console.log("Generating poem");
