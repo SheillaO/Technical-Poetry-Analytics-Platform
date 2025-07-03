@@ -2,7 +2,7 @@ function generatePoem(event) {
   event.preventDefault();
 
   new Typewriter("#poem", {
-    strings: "Technical poem based om market trends",
+    strings: "Technical poem based on market trends",
     autoStart: true,
     delay: 1,
     cursor: "",
