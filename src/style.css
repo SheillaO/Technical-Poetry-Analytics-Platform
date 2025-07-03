@@ -1,6 +1,7 @@
 body {
-  background-color: #f9f7fe;
+  background-color:#f4f4f7;
   font-family: Helvetica, Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 a {
@@ -14,14 +15,17 @@ a {
 
 h1 {
   font-weight: 700;
-  font-size: 34px;
+  font-size: 32px;
   line-height: 1.5;
-  color: #272044;
+  color: #2c2c2c;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 header {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
 }
 
 .form-container {
@@ -51,37 +55,58 @@ form {
 .instructions {
   padding: 16px;
   border: 1px solid rgba(39, 33, 66, 0.5);
-  width: 80%;
+  width: 100%;
   font-size: 16px;
   border-radius: 50px;
   line-height: 20px;
   color: #272044;
+  background-color: #fdfdfd;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .submit-button {
   margin-left: 10px;
   background-color: #885df1;
-  color: whitesmoke;
+  color: #fff;
   border: none;
   width: 150%;
   font-size: 16px;
   border-radius: 50px;
+  cursor: pointer;  
   padding: 14px 24px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #6d48c6;
 }
 
 .poem {
-  font-size: 16px;
-  background-color: whitesmoke;
-  padding: 20px;
-  line-height: 2;
-  border-left: 3px solid #885df1;
-  box-shadow: 0px 4px 30px 0px rgba(65, 50, 100, 0.8);
+  font-size: 18px;
+  background-color: #fff;
+  padding: 24px;
+  line-height: 1.8;
+  border-left: 5px solid #885df1;
+  box-shadow: 0px 6px 30px 0px rgba(65, 50, 100, 0.15);
+  margin-top: 20px;
+  font-weight: 500;
 }
 
 footer {
   text-align: center;
   font-size: 13px;
-  margin-top: 30px;
+  margin-top: 40px;
+  color: #555;
+  opacity: 0.8;
+}
+
+footer a {
+  color: #885df1;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 .poem strong {
