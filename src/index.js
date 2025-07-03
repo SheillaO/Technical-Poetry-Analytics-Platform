@@ -14,9 +14,10 @@ function generatePoem(event) {
   let instructionsInput = document.querySelector("#user-instructions");
 
   let apiKey = "7601b0fff0179o9d5059a8db34ctbc66";
-  let prompt = `User instructions: Write a technical sentiment based on ${instructionsInput.value}.`;
-  let context =
-    "You are a financial markets,technology, analytics expert who loves to write short sentences covering financial markets,technology and analytics. Your mission is to generate a four line sentiment in basic HTML and separate each line with a <br />.Include a title. Sign the poem with `SheCodes AI` inside a <strong></strong> element. Exclude the html in the answer generated. Be creative and give out of the box answers. Showcase data interpretation skills and technical integration. Make sure to use user instructions below";
+  let prompt = `Write a short 4-line insight about financial markets, technology, and analytics: ${instructionsInput.value}.Do not include a title. Add <br /> after each line. On a new fifth line, add 'Olga AI' inside a <strong> tag. Do not include any HTML tags in the answer. Write like a technical product marketing manager presenting data insights to executives. Be creative but clear.`;
+
+  let context = `You are a technical product marketing manager who turns complex data into short simple, impactful insights like poetry. You focus on financial markets, technology trends, and analytics. Your tone is professional, data-informed, and strategic — always clear and concise. Keep it creative but focused on business and technical impact.`;
+
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   console.log("Generating poem");
