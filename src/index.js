@@ -1,7 +1,6 @@
 function displayPoem(response) {
-  
-  console.log("poem generated")
-    new Typewriter("#poem", {
+  console.log("poem generated");
+  new Typewriter("#poem", {
     strings: response.data.answer,
     autoStart: true,
     delay: 1,
@@ -12,22 +11,20 @@ function displayPoem(response) {
 function generatePoem(event) {
   event.preventDefault();
 
+  let instructionsInput = document.querySelector("#user-instructions");
+
   let apiKey = "7601b0fff0179o9d5059a8db34ctbc66";
-  let prompt = "Write a technical poem based on current market trends.";
-  let context = "Financial markets, technology, analytics.";
+  let prompt = `User instructions: Write a technical poem based on ${instructionsInput.value}.`;
+  let context =
+    "You are a financial markets,technology, analytics expert who loves to write short poems. Your mission is to generate a four line poem in basic HTML and separate each line with a <br />.Include a title. Sign the poem with `SheCodes AI` inside a <strong></strong> element. Exclude the html in the answer generated. Make sure to use user instructions below";
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
-  
-  console.log("generating poem")
-  
-  axios.get(apiURL).then (displayPoem);
-  
-  
-  
+  console.log("Generating poem");
+  console.log(`Prompt: ${prompt}`);
+  console.log(`Context: ${context}`);
 
+  axios.get(apiURL).then(displayPoem);
 }
 
 let poemFormElement = document.querySelector("#poem-generator-form");
 poemFormElement.addEventListener("submit", generatePoem);
-
-
