@@ -1,14 +1,16 @@
-function generatePoem(event){
+function generatePoem(event) {
   event.preventDefault();
 
   new Typewriter("#poem", {
-    strings: ["Technical Poem based on Market Trends"],
+    strings: "La tombe dit à la rose",
+    autoStart: true,
     delay: 1,
     cursor: "",
   });
 }
 
-
-
-let poemFormElement = document.querySelector("#poem-generator");
+let poemFormElement = document.querySelector("#poem-generator-form");
 poemFormElement.addEventListener("submit", generatePoem);
+
+
+alert("hello")
